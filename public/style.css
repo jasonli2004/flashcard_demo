@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#flashcards-container {
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.flashcard-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.front {
+    background-color: #fff;
+    color: #000;
+}
+
+.back {
+    background-color: #007bff;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
+.navigation button {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.navigation button:hover {
+    background-color: #0056b3;
+}
+
+.navigation button:disabled {
+    background-color: #ccc;
+}
+
+#flashcard-form, #note-upload-form {
+    margin: 20px;
+    text-align: center;
+}
+
+#flashcard-form input[type="text"], #note-upload-form input[type="file"] {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#flashcard-form button, #note-upload-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+#flashcard-form button:hover, #note-upload-form button:hover {
+    background-color: #218838;
+}
+
+#status-message {
+    color: #007bff;
+    margin-top: 20px;
+}

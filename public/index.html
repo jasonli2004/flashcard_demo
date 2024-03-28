@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Study App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Flashcard Study App</h1>
+    
+    <div id="flashcards-container"></div>
+
+    <div class="navigation">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <form id="flashcard-form">
+        <input type="text" id="question" placeholder="Question" required>
+        <input type="text" id="answer" placeholder="Answer" required>
+        <button type="submit">Add Flashcard</button>
+    </form>
+
+    <form id="note-upload-form">
+        <input type="file" id="note-image" accept="image/*">
+        <button type="submit">Generate Flashcards</button>
+    </form>
+
+    <div id="status-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
